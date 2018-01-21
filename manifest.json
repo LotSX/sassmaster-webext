@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Nice translator",
+  "name": "Sassmaster WebExt",
   "version": "1.0",
   "applications": {
     "gecko": {
@@ -15,7 +15,7 @@
   ],
   "browser_action": {
     "browser_style": true,
-    "default_title": "Tranny",
+    "default_title": "Sassy",
     "default_popup": "choose-lang.html"
   },
   "background": {
