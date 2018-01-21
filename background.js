@@ -16,6 +16,9 @@ browser.contextMenus.create({
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === 'sass-translate') {
-   
+    browser.tabs.create({
+            active: false,
+            url: 'http:localhost:4567/sarc_resp'
+          });
   }
 });
