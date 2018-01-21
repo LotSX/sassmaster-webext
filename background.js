@@ -20,7 +20,12 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === 'sass-translate') {
     const str = info.selectionText;
    
-    Api.post('localhost:12345', '${str}');
+    Api.post(
+      'localhost:12345',
+      '${str}'
+    ).then(r => {
+      console.log('return: ', r);
+    });
     // url: `https://translate.google.com/${fromLang}/${toLang}/${str}`
   }
 });
