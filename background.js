@@ -16,11 +16,12 @@ browser.contextMenus.create({
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === 'sass-translate') {
-    const str = info.selectionText;
+    const str = info.selectionText
+             .replace(" ", "+");;
 
     browser.tabs.create({
             active: false,
-            url: 'http:localhost:4567/sarc_query/${str}'
+            url: `http:localhost:4567/sarc_query/${str}`
           });
   }
 });
