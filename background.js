@@ -1,3 +1,5 @@
+import Api from '/api';
+
 'use strict';
 
 /*global chrome:false*/
@@ -17,8 +19,8 @@ browser.contextMenus.create({
 browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === 'sass-translate') {
     const str = info.selectionText;
-    
-    
+   
+    Api.post('localhost:12345', '${str}');
     // url: `https://translate.google.com/${fromLang}/${toLang}/${str}`
   }
 });
