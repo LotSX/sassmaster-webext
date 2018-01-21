@@ -1,3 +1,4 @@
-# Translator
+# sassmaster-webext
 
-A little translator extension that feeds selected text into google translate with a selected output / input language
+uses sassmaster(https://github.com/Cheekyshroom/sassmaster2018) to check for
+sarcasm in text selections.
